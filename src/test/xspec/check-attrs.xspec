@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../main/sch/check-attrs.sch">
+  
+  <x:scenario label="sch OK">
+    <x:context href="../samples/foo.xml" />
+    <x:expect-report id="wrong-att" label="The report is fired."/>
+  </x:scenario>
+</x:description>
