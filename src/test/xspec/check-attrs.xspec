@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" schematron="../../main/sch/check-attrs.sch">
+<x:description
+  xmlns:x="http://www.jenitennison.com/xslt/xspec"
+  schematron="../../main/sch/check-attrs.sch">
+  
+  <x:scenario label="XML with 'bad' attribute">
+    <x:context href="../samples/foo.xml" />
+    <x:expect-report id="wrong-att" label="The wrong value is detected."/>
+  </x:scenario>
   
   <x:scenario label="sch OK">
-    <x:context href="../samples/foo.xml" />
-    <x:expect-report id="wrong-att" label="The report is fired."/>
+    <x:context href="../samples/foo-valid.xml" />
+    <x:expect-not-report id="wrong-att" label="The report is not fired."/>
   </x:scenario>
 </x:description>
